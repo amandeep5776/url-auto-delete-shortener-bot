@@ -108,7 +108,7 @@ async def next_page(bot, query):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/asb_backup')
+            InlineKeyboardButton(text="⚡ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⚡", url='https://t.me/asb_backup/41')
         ]
     )
 
@@ -682,7 +682,7 @@ async def auto_filter(client, msg, spoll=False):
 
     btn.insert(0,
         [
-            InlineKeyboardButton(text=" ⬇️ ⬇ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⬇ ⬇️ ", url='https://t.me/asb_backup')
+            InlineKeyboardButton(text=" ⬇️ ⬇ʜᴏᴡ ᴛᴏ ᴅᴏᴡɴʟᴏᴀᴅ⬇ ⬇️ ", url='https://t.me/asb_backup/41')
         ]
     )
 
@@ -733,7 +733,10 @@ async def auto_filter(client, msg, spoll=False):
             **locals()
         )
     else:
-        cap = f"Rᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search}</code>\n\n\n😌 ɪꜰ ᴛʜᴇ ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀʀᴇ ʟᴏᴏᴋɪɴɢ ꜰᴏʀ ɪs ɴᴏᴛ ᴀᴠᴀɪʟᴀʙʟᴇ ᴛʜᴇɴ ʟᴇᴀᴠᴇ ᴀ ᴍᴇssᴀɢᴇ ʙᴇʟᴏᴡ 😌 \n\nᴇxᴀᴍᴘʟᴇ : \n\nᴇɴᴛᴇʀ ʏᴏᴜʀ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ (ʏᴇᴀʀ) ᴛᴀɢ @Asb_universal_bot"
+        cap = f"Rᴇǫᴜᴇsᴛᴇᴅ ᴍᴏᴠɪᴇ ɴᴀᴍᴇ : <code>{search}</code>\n\n\n😌 ɪꜰ ᴛʜᴇ ᴍᴏᴠɪᴇ ʏᴏᴜ ᴀʀᴇ ʟᴏᴏᴋɪɴɢ ꜰor is not found , THEN PLEASE CHEAK YOUR SPELLING ON GOOGLE ,
+        NOTE-: TYPE ONLY MOVIE NAME 
+               DON'T USE THIS WORDS ❌ Movie, Hindi Movie, South Movie, Please Send, Full HD Movie 
+        😌 "
     if imdb and imdb.get('poster'):
         try:
             hehe =  await message.reply_photo(photo=imdb.get('poster'), caption=cap[:1024],
@@ -770,7 +773,9 @@ async def advantage_spell_chok(msg):
     g_s += await search_gagala(msg.text)
     gs_parsed = []
     if not g_s:
-        k = await msg.reply("I couldn't find any movie in that name.")
+        k = await msg.reply("I couldn't find any movie in that name. PLEASE CHEAK YOUR SPELLING ON GOOGLE ,
+        NOTE-: TYPE ONLY MOVIE NAME 
+               DON'T USE THIS WORDS ❌ Movie, Hindi Movie, South Movie, Please Send, Full HD Movie ")
         await asyncio.sleep(8)
         await k.delete()
         return
